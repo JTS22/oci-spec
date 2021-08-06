@@ -274,7 +274,7 @@ pub enum Arch {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct LinuxSyscall {
     pub names: Vec<String>,
-    pub actions: LinuxSeccompAction,
+    pub action: LinuxSeccompAction,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub args: Option<Vec<LinuxSeccompArg>>,
 }
