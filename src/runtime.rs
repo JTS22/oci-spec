@@ -206,7 +206,7 @@ pub enum LinuxDeviceType {
     p,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct LinuxDevice {
     pub path: String,
     #[serde(rename = "type")]
